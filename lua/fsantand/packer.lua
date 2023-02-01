@@ -12,15 +12,6 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  require("rose-pine").setup()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
   use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } )
   use ('theprimeagen/harpoon')
   use ('mbbill/undotree')
@@ -55,9 +46,21 @@ return require('packer').startup(function(use)
   }
   use{
       'sainnhe/sonokai',
+      as = 'sonokai',
+      config = function ()
+          vim.cmd("colorscheme sonokai")
+      end
+
   }
   use{
       "christoomey/vim-tmux-navigator"
+  }
+  use {
+      'goolord/alpha-nvim',
+      requires = { 'nvim-tree/nvim-web-devicons' },
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
   }
 end)
 
