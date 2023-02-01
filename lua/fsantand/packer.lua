@@ -46,7 +46,6 @@ return require('packer').startup(function(use)
   }
   use{
       'sainnhe/sonokai',
-      as = 'sonokai',
       config = function ()
           vim.cmd("colorscheme sonokai")
       end
@@ -62,5 +61,8 @@ return require('packer').startup(function(use)
           require'alpha'.setup(require'alpha.themes.startify'.config)
       end
   }
+  use("tpope/vim-surround")
+  use("vim-scripts/ReplaceWithRegister")
+  use("numToStr/Comment.nvim")
 end)
 
