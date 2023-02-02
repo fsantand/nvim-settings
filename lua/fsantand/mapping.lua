@@ -21,3 +21,7 @@ keymap.set("i", "<Right>", "<ESC>:echoe 'Use Use l, you dumbfuck!'<CR>")
 keymap.set("i", "<Up>", "<ESC>:echoe 'Use Use k, you dumbfuck!'<CR>")
 keymap.set("i", "<Down>",  "<ESC>:echoe 'Use Use j, you dumbfuck!'<CR>")
 
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzz")
+keymap.set("n", "N", "Nzz")
