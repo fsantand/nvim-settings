@@ -64,5 +64,11 @@ return require('packer').startup(function(use)
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
   use("numToStr/Comment.nvim")
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use 'feline-nvim/feline.nvim'
+  use {
+      'lewis6991/gitsigns.nvim',
+      -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+  }
 end)
 
