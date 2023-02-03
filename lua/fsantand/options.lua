@@ -31,7 +31,7 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "80"
+opt.colorcolumn = "90"
 
 vim.g.mapleader = " "
 

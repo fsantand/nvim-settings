@@ -1,7 +1,5 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -68,8 +66,8 @@ return require('packer').startup(function(use)
   use 'feline-nvim/feline.nvim'
   use {
       'lewis6991/gitsigns.nvim',
-      -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
   use {'ThePrimeagen/vim-be-good'}
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 end)
 

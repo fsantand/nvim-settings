@@ -6,11 +6,6 @@ local keymap = vim.keymap
 keymap.set("n", "Q", "<nop>")
 
 -- Tabs
-keymap.set("n", "<leader>to", ":tabnew<CR>")
-keymap.set("n", "<leader>tx", ":tabclose<CR>")
-keymap.set("n", "<leader>tn", ":tabn<CR>")
-keymap.set("n", "<leader>tp", ":tabp<CR>")
-
 keymap.set("n", "<Left>>", ":echoe 'Use Use h, you dumbfuck!'<CR>")
 keymap.set("n", "<Right>", ":echoe 'Use Use l, you dumbfuck!'<CR>")
 keymap.set("n", "<Up>", ":echoe 'Use Use k, you dumbfuck!'<CR>")

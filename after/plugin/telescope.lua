@@ -14,9 +14,6 @@ telescope.setup({
         lsp_dynamic_workspace_symbols = {
             sorter = telescope.extensions.fzf.native_fzf_sorter(fzf_opts)
         },
-        lsp_workspace_symbols = {
-            sorter = telescope.extensions.fzf.native_fzf_sorter(fzf_opts)
-        }
     },
     extensions = {
         fzf = fzf_opts
