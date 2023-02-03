@@ -12,5 +12,7 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 nvim_tree.setup()
 
-vim.keymap.set("n", "<leader>tt", nvim_tree_api.tree.toggle)
+vim.keymap.set("n", "<leader>tt", function ()
+    nvim_tree_api.tree.toggle({find_file=true, focus=true})
+end)
 
