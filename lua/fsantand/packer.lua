@@ -68,6 +68,7 @@ return require('packer').startup(function(use)
       'lewis6991/gitsigns.nvim',
   }
   use {'ThePrimeagen/vim-be-good'}
-  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+  use {'romgrk/barbar.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use 'voldikss/vim-floaterm'
 end)
 
