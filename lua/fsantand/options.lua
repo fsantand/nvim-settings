@@ -35,3 +35,4 @@ opt.colorcolumn = "90"
 
 vim.g.mapleader = " "
 
+vim.cmd("filetype plugin indent on")
