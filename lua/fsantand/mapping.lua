@@ -1,5 +1,3 @@
-local g = vim.g
-local cmd = vim.cmd
 local keymap = vim.keymap
 
 -- Mapping
@@ -23,3 +21,10 @@ keymap.set("n", "N", "Nzz")
 
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
+
+keymap.set("x", "<leader>p", "\"_dP")
+keymap.set("i", "<leader>y", "\"_+y")
+keymap.set("v", "<leader>y", "\"_+y")
+keymap.set("n", "<leader>Y", "\"_+Y")
+
+keymap.set("v", "<leader>Y", "\"+y")
