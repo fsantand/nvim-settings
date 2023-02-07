@@ -76,5 +76,6 @@ return require('packer').startup(function(use)
           require("barbecue").setup()
       end,
   })
+  use "jose-elias-alvarez/null-ls.nvim"
 end)
 
