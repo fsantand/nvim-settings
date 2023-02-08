@@ -77,5 +77,7 @@ return require('packer').startup(function(use)
       end,
   })
   use "jose-elias-alvarez/null-ls.nvim"
+  use "tummetott/reticle.nvim"
+  use "onsails/lspkind.nvim"
 end)
 
