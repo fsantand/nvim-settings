@@ -28,3 +28,6 @@ keymap.set("v", "<leader>y", "\"_+y")
 keymap.set("n", "<leader>Y", "\"_+Y")
 
 keymap.set("v", "<leader>Y", "\"+y")
+
+-- Git
+keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>")
