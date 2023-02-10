@@ -37,3 +37,5 @@ vim.g.mapleader = " "
 
 vim.cmd("filetype plugin indent on")
 vim.wo.cursorline = true
+
+opt.guicursor = "n-v-c:block,i-ci-ve:ver25"
