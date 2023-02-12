@@ -79,5 +79,9 @@ return require('packer').startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim"
   use "tummetott/reticle.nvim"
   use "onsails/lspkind.nvim"
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
 end)
 
