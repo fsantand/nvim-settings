@@ -6,7 +6,7 @@ lsp.ensure_installed({
     -- Markdown
     "marksman",
     -- lua stuff
-    "sumneko_lua",
+    "lua_ls",
     -- python
     "pyright",
 })
@@ -39,7 +39,7 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-H>", function() vim.lsp.buf.signature_help() end, opts)
 
-    require("cmp").setup({
+    local cmp = require("cmp").setup({
         window = {
             completion = {
                 winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
@@ -59,6 +59,11 @@ lsp.on_attach(function(_, bufnr)
             end,
         },
     })
+
+    cmp.event:on(
+        "confirm_done",
+        require("nvim-autopairs.completion.cmp")
+    )
 end)
 
 lsp.setup()
