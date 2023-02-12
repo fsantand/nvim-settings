@@ -1,10 +1,14 @@
 local opt = vim.opt
 local opt_s = vim.o
 
+-- Unix-like settings
+if vim.loop.os_uname().sysname ~= "Windows_NT" then
+    opt_s.directory = "~/.local/share/nvim/swap"
+    opt.undodir = os.getenv("HOME") .. "/.vim/undodir/"
+end
 
 -- Editor
---
-opt_s.directory = "~/.local/share/nvim/swap"
+
 opt.guicursor = ""
 opt.nu = true
 opt.relativenumber = true
@@ -18,7 +22,6 @@ opt.expandtab = true
 opt.wrap = false
 opt.swapfile = false
 opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir/"
 
 opt.hlsearch = false
 opt.incsearch = true
