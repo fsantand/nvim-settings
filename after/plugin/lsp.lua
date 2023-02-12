@@ -1,4 +1,6 @@
 local lsp = require('lsp-zero')
+local cmp = require("cmp")
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
 lsp.preset('recommended')
 
@@ -39,7 +41,7 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-H>", function() vim.lsp.buf.signature_help() end, opts)
 
-    local cmp = require("cmp").setup({
+    cmp.setup({
         window = {
             completion = {
                 winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
@@ -62,7 +64,7 @@ lsp.on_attach(function(_, bufnr)
 
     cmp.event:on(
         "confirm_done",
-        require("nvim-autopairs.completion.cmp")
+        cmp_autopairs.on_confirm_done()
     )
 end)
 
