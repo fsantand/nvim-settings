@@ -3,8 +3,8 @@ local opt_s = vim.o
 
 -- Unix-like settings
 if vim.loop.os_uname().sysname ~= "Windows_NT" then
-    opt_s.directory = "~/.local/share/nvim/swap"
-    opt.undodir = os.getenv("HOME") .. "/.vim/undodir/"
+	opt_s.directory = "~/.local/share/nvim/swap"
+	opt.undodir = os.getenv("HOME") .. "/.vim/undodir/"
 end
 
 -- Editor
@@ -38,7 +38,8 @@ opt.colorcolumn = "90"
 
 vim.g.mapleader = " "
 
-vim.cmd("filetype plugin indent on")
+vim.cmd("filetype plugin indent off")
 vim.wo.cursorline = true
 
+-- Block on command mode, | on insert mode
 opt.guicursor = "n-v-c:block,i-ci-ve:ver25"
