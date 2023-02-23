@@ -34,12 +34,9 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "90"
-
 vim.g.mapleader = " "
 
 vim.cmd("filetype plugin indent off")
-vim.wo.cursorline = true
 
 -- Block on command mode, | on insert mode
 opt.guicursor = "n-v-c:block,i-ci-ve:ver25"
