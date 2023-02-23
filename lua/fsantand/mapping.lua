@@ -31,3 +31,11 @@ keymap.set("v", "<leader>Y", '"+y')
 
 -- Git
 keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>")
+
+-- Move lines
+keymap.set("n", "<C-S-j>", ":m .+1<CR>==")
+keymap.set("n", "<C-S-k>", ":m .-2<CR>==")
+keymap.set("i", "<C-S-j>", "<Esc>:m .+1<CR>==gi")
+keymap.set("i", "<C-S-k>", "<Esc>:m .-2<CR>==gi")
+keymap.set("v", "<C-S-j>", ":m '>+1<CR>gv=gv")
+keymap.set("v", "<C-S-k>", ":m '<-2<CR>gv=gv")

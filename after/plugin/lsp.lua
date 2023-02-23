@@ -31,7 +31,7 @@ lsp.on_attach(function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
 	vim.keymap.set("n", "gd", function()
-		vim.lsp.buf.definition()
+		vim.lsp.buf.definition({ resuse_win = true })
 	end, opts)
 	vim.keymap.set("n", "K", function()
 		vim.lsp.buf.hover()
@@ -57,7 +57,7 @@ lsp.on_attach(function(_, bufnr)
 	vim.keymap.set("n", "<leader>vrn", function()
 		vim.lsp.buf.rename()
 	end, opts)
-	vim.keymap.set("i", "<C-k>", function()
+	vim.keymap.set("i", "<C-K>", function()
 		vim.lsp.buf.signature_help()
 	end, opts)
 
@@ -68,9 +68,11 @@ lsp.on_attach(function(_, bufnr)
 			end,
 		},
 		sources = {
-			{ name = "nvim_lsp" },
+			{ name = "nvim_lua" },
+			{ name = "nvim_lsp", max_item_count = 5 },
+			{ name = "path" },
 			{ name = "luasnip" },
-			{ name = "buffer" },
+			{ name = "buffer", keyword_length = 5 },
 		},
 		window = {
 			completion = cmp.config.window.bordered(),

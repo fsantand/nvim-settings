@@ -1,9 +1,14 @@
 local null_ls = require("null-ls")
 local b = null_ls.builtins
 
+local black_options = {
+	args = { "--line-length", "90", "--stdin-filename", "$FILENAME", "--quiet", "-" },
+	extra_args = { "--fast" },
+}
+
 local sources = {
 	-- python
-	b.formatting.black.with({ extra_args = { "--fast" } }),
+	b.formatting.black.with(black_options),
 	b.formatting.isort,
 	b.diagnostics.flake8,
 	-- Golang

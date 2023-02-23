@@ -87,4 +87,12 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({ "ray-x/lsp_signature.nvim" })
+	use({ "ibhagwan/fzf-lua" })
+	use({
+		"natecraddock/workspaces.nvim",
+		config = function()
+			require("workspaces").setup()
+		end,
+	})
+	use({ "interdependence/tree-sitter-htmldjango" })
 end)
