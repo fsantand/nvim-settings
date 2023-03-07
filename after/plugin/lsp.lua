@@ -68,10 +68,9 @@ lsp.on_attach(function(_, bufnr)
 			end,
 		},
 		sources = {
-			{ name = "nvim_lua" },
+            { name = "luasnip" },
 			{ name = "nvim_lsp", max_item_count = 5 },
 			{ name = "path" },
-			{ name = "luasnip" },
 			{ name = "buffer", keyword_length = 5 },
 		},
 		window = {

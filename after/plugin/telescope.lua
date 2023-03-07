@@ -22,12 +22,12 @@ telescope.setup({
 	},
 })
 
+telescope.load_extension("fzf")
+telescope.load_extension("workspaces")
+
 vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
 vim.keymap.set("n", "<leader>ps", builtin.live_grep)
 vim.keymap.set("n", "<leader>tk", builtin.keymaps, {})
 vim.keymap.set("n", "<leader>po", builtin.lsp_document_symbols, {})
-
-telescope.load_extension("fzf")
-telescope.load_extension("workspaces")
-
 vim.keymap.set("n", "<leader>pw", ":Telescope workspaces<CR>")
+vim.keymap.set("n", "<leader>pr", builtin.resume)
