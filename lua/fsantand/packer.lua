@@ -41,12 +41,6 @@ return require("packer").startup(function(use)
 	-- 	},
 	-- })
 	use({
-		"sainnhe/sonokai",
-		config = function()
-			vim.cmd("colorscheme sonokai")
-		end,
-	})
-	use({
 		"folke/tokyonight.nvim",
 		config = function()
 			vim.cmd("colorscheme tokyonight")
