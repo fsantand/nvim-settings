@@ -47,6 +47,12 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({
+		"folke/tokyonight.nvim",
+		config = function()
+			vim.cmd("colorscheme tokyonight")
+		end,
+	})
+	use({
 		"christoomey/vim-tmux-navigator",
 	})
 	use({
@@ -74,7 +80,7 @@ return require("packer").startup(function(use)
 			"SmiteshP/nvim-navic",
 		},
 		config = function()
-			require("barbecue").setup()
+			require("barbecue").setup({ theme="tokyonight" })
 		end,
 	})
 	use("jose-elias-alvarez/null-ls.nvim")

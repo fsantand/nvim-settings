@@ -11,10 +11,6 @@ vim.g.loaded_netrwPlugin = 1
 -- -- empty setup using defaults
 nvim_tree.setup({
 	update_cwd = true,
-	sort_by = "case_sensitive",
-	view = {
-        side = "right"
-	},
 	filters = {
 		dotfiles = true,
 	},
